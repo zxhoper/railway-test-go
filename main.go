@@ -21,7 +21,7 @@ func main() {
 
 	e.GET("/show", show)
 
-	e.Logger.Fatal(e.Start(":1323"))
+	e.Logger.Fatal(e.Start(":443"))
 
 }
 
@@ -36,7 +36,7 @@ func getUser(c echo.Context) error {
 	return c.String(http.StatusOK, id)
 }
 
-//e.GET("/show", show)
+// e.GET("/show", show)
 func show(c echo.Context) error {
 	// Get team and member from the query string
 	team := c.QueryParam("team")
